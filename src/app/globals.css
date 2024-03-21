@@ -1,33 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.bodyFont {
+  font-family: 'Prosto One', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 49px;
+  height: 49px;
+  color: aliceblue;
+  background-image: url('data:image/svg+xml,<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 48 48"><path d="M8.1%201.3C1.6%203.6.5%206.4.2%2021.8c-.4%2015.5.6%2020.3%205.1%2023.6%202.5%201.8%204.5%202.1%2016.5%202.4%2015.5.4%2020.3-.6%2023.6-5.1%201.9-2.6%202.1-4.2%202.1-18.7s-.2-16.1-2.1-18.7c-1.1-1.5-3.6-3.3-5.5-4-4.5-1.6-27.3-1.6-31.8%200" fill="%23911016"/></svg>');
+}
+
+.button {
+  width: 188px;
+  height: 60px;
+  top: 2px;
+  left: 1081px;
+  padding: 12px 16px 12px 16px;
+  gap: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.05);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(0deg, #EEE7E1, #EEE7E1), linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 41.46%);
 }
 
 @layer utilities {
   .text-balance {
-    text-wrap: balance;
+    text-wrap: initial;
   }
 }
