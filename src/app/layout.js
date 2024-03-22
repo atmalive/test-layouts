@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
         <body className={'bodyFont'}>
-          <div className="min-h-screen flex flex-col px-12 pt-4 gap-24">
+          <div className="min-h-screen flex flex-col p-3 md:px-12 md:pt-4 gap-4 md:gap-24">
             <Header/>
             {children}
             <Footer/>

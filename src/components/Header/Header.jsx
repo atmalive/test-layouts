@@ -4,16 +4,16 @@ export const Header = () => {
 
 
     return (
-        <div className="py-5 px-10 flex justify-between items-center border-b">
+        <div className="md:py-5 md:px-10 flex justify-between items-center border-b">
             <div className='flex items-center justify-start gap-3'>
                 <div className="logo">
                     ИЗ
                 </div>
-                <h1 className=" text-2xl font-normal leading-normal text-left text-red-800">Институт запусков</h1>
+                <h1 className="hidden md:block text-2xl font-normal leading-normal text-left text-red-800">Институт запусков</h1>
             </div>
 
             <button
-                className="font-inter flex items-center justify-start gap-4 bg-white h-15 min-w-32 pt-3 pb-3 pl-4 pr-5 shadow-sm w-[190px] h-[60px] text-md font-medium rounded-2xl text-[rgb(54,70,112)]">
+                className="font-inter flex items-center justify-start gap-4 bg-white h-15 min-w-32 pt-3 pb-3 pl-4 pr-5 shadow-sm w-[190px] h-[60px] text-md font-medium rounded-2xl text-[rgb(54,70,112)] hover:opacity-90">
                 <div className='rounded-full px-3 py-2 bg-[#A68144]'>
                     <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path

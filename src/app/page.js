@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
 
-       <div className="flex flex-col gap-24 px-10 pt-2">
+       <div className="flex flex-col gap-4 md:gap-28 p-1 md:px-10 md:pt-2">
          <SearchBar isVacancy={isVacancy} setIsVacancy={setIsVacancy} />
          <CardList isVacancy={isVacancy}/>
        </div>
