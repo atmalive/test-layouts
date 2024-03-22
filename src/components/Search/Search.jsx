@@ -50,7 +50,7 @@ export const Search = () => {
                             <ul className='flex flex-col'>
                                 {filteredServices.length > 0 ? (
                                     filteredServices.map((service, index) => (
-                                        <li key={index} className={`px-5 py-2 font-inter md:text-lg font-medium text=[#364670] ${index === selectedIndex ? 'bg-gray-200' : ''}`} onClick={() => setSearchTerm(service)}>
+                                        <li key={index} className={`px-5 py-2 hover:bg-gray-200 font-inter md:text-lg font-medium text=[#364670] ${index === selectedIndex ? 'bg-gray-200' : ''}`} onClick={() => setSearchTerm(service)}>
                                             {service}
                                         </li>
                                     ))
