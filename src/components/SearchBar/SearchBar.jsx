@@ -23,7 +23,7 @@ export const SearchBar = ({isVacancy, setIsVacancy}) => {
                 <button
                     disabled={!isVacancy} // Кнопка становится неактивной, если isVacancy === false
                     onClick={handleClick}
-                    className={`font-inter flex items-center justify-center gap-4 ${!isVacancy ? 'bg-[#911016] text-white font-medium' : 'text-[#911016] font-bold'} p-2 rounded-2xl leading-[19.36px] tracking-wide text-md hover:opacity-90`}
+                    className={`font-inter flex items-center justify-center gap-4 ${!isVacancy ? 'bg-[#911016] text-white font-medium' : 'text-[#911016] font-bold'} p-3 rounded-2xl leading-[19.36px] tracking-wide text-md hover:opacity-90`}
                 >
                     Резюме
                 </button>
