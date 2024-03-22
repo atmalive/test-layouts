@@ -1,23 +1,71 @@
 
-export const CardList = () => {
+export const CardList = ({isVacancy = true}) => {
+
+    if (isVacancy) {
+        return (
+            <div className="flex justify-start items-center gap-3">
+                <div className="flex flex-col items-start justify-start max-w-[300px] w-full">
+                    <img className="w-full h-32 object-cover mb-3 rounded"
+                         src="/1.png" alt="Копирайтер"/>
+                    <div
+                        className="text-center font-inter text-[23px] font-medium tracking-normal text-[#364670]">Копирайтер
+                    </div>
+                </div>
+                <div className="flex flex-col items-start justify-start max-w-[300px] w-full">
+                    <img className="w-full h-32 object-cover mb-3 rounded"
+                         src="/2.png" alt="Копирайтер"/>
+                    <div
+                        className="text-center font-inter text-[23px] font-medium tracking-normal text-[#364670]">Механик
+                    </div>
+                </div>
+                <div className="flex flex-col items-start justify-start max-w-[300px] w-full">
+                    <img className="w-full h-32 object-cover mb-3 rounded"
+                         src="/3.png" alt="Копирайтер"/>
+                    <div
+                        className="text-center font-inter text-[23px] font-medium tracking-normal text-[#364670]">Шеф-повар
+                    </div>
+                </div>
+                <div className="flex flex-col items-start justify-start max-w-[300px] w-full">
+                    <img className="w-full h-32 object-cover mb-3 rounded"
+                         src="/4.png" alt="Копирайтер"/>
+                    <div
+                        className="text-center font-inter text-[23px] font-medium tracking-normal text-[#364670]">Адвокат
+                    </div>
+                </div>
+            </div>
+        )
+
+    }
 
     return (
-        <div className="grid grid-cols-2 gap-4 mb-10">
-            <div className="flex flex-col items-center">
-                <img className="w-full h-32 object-cover mb-2 rounded" src="/images/copywriter.jpg" alt="Копирайтер"/>
-                <div className="text-center font-medium">Копирайтер</div>
+        <div className="flex justify-start items-center gap-3">
+            <div className="flex flex-col items-start justify-start max-w-[300px] w-full">
+                <img className="w-full h-32 object-cover mb-3 rounded"
+                     src="/4.png" alt="Копирайтер"/>
+                <div
+                    className="text-center font-inter text-[23px] font-medium tracking-normal text-[#364670]">Не Копирайтер
+                </div>
             </div>
-            <div className="flex flex-col items-center">
-                <img className="w-full h-32 object-cover mb-2 rounded" src="/images/mechanic.jpg" alt="Механик"/>
-                <div className="text-center font-medium">Механик</div>
+            <div className="flex flex-col items-start justify-start max-w-[300px] w-full">
+                <img className="w-full h-32 object-cover mb-3 rounded"
+                     src="/3.png" alt="Копирайтер"/>
+                <div
+                    className="text-center font-inter text-[23px] font-medium tracking-normal text-[#364670]">Не Механик
+                </div>
             </div>
-            <div className="flex flex-col items-center">
-                <img className="w-full h-32 object-cover mb-2 rounded" src="/images/chef.jpg" alt="Шеф-повар"/>
-                <div className="text-center font-medium">Шеф-повар</div>
+            <div className="flex flex-col items-start justify-start max-w-[300px] w-full">
+                <img className="w-full h-32 object-cover mb-3 rounded"
+                     src="/2.png" alt="Копирайтер"/>
+                <div
+                    className="text-center font-inter text-[23px] font-medium tracking-normal text-[#364670]">Не Шеф-повар
+                </div>
             </div>
-            <div className="flex flex-col items-center">
-                <img className="w-full h-32 object-cover mb-2 rounded" src="/images/lawyer.jpg" alt="Адвокат"/>
-                <div className="text-center font-medium">Адвокат</div>
+            <div className="flex flex-col items-start justify-start max-w-[300px] w-full">
+                <img className="w-full h-32 object-cover mb-3 rounded"
+                     src="/1.png" alt="Копирайтер"/>
+                <div
+                    className="text-center font-inter text-[23px] font-medium tracking-normal text-[#364670]">Не Адвокат
+                </div>
             </div>
         </div>
     )
