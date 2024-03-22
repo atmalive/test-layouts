@@ -6,15 +6,16 @@ import {services} from "@/utils/services";
 export const Search = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedIndex, setSelectedIndex] = useState(-1);
-
+    const [isListVisible, setIsListVisible] = useState(true);
 
     const filteredServices = services.filter(service =>
         service.toLowerCase().includes(searchTerm.toLowerCase())
-    ).slice(0, 4); // Отрезать до 4 элементов
+    ).slice(0, 4);
 
     const handleInputChange = (event) => {
         setSearchTerm(event.target.value);
-        setSelectedIndex(-1); // Сбросить выбранный элемент при изменении поиска
+        setSelectedIndex(-1);
+        setIsListVisible(true);
     };
 
     useEffect(() => {
@@ -34,6 +35,11 @@ export const Search = () => {
     }, [filteredServices.length]);
 
 
+    const handleItemClick = (service) => {
+        setSearchTerm(service);
+        setIsListVisible(false);
+    };
+
     return (
         <div className="w-full mx-auto">
             <form className="relative flex flex-col-reverse md:flex-row w-full gap-3" onSubmit={e => e.preventDefault()}>
@@ -45,17 +51,20 @@ export const Search = () => {
                         onChange={handleInputChange}
                         value={searchTerm}
                     />
-                    {searchTerm && (
+                    {searchTerm && isListVisible && (
                         <div className="py-2 bg-white border-[1px] border-[#EAEAEA] rounded-xl w-full max-h-48 absolute" style={{zIndex: 10}}>
                             <ul className='flex flex-col'>
                                 {filteredServices.length > 0 ? (
                                     filteredServices.map((service, index) => (
-                                        <li key={index} className={`px-5 py-2 hover:bg-gray-200 font-inter md:text-lg font-medium text=[#364670] ${index === selectedIndex ? 'bg-gray-200' : ''}`} onClick={() => setSearchTerm(service)}>
+                                        <li key={index}
+                                            className={`px-5 py-2 hover:bg-gray-200 font-inter md:text-lg font-medium text=[#364670] ${index === selectedIndex ? 'bg-gray-200' : ''}`}
+                                            onClick={() => handleItemClick(service)}>
                                             {service}
                                         </li>
                                     ))
                                 ) : (
-                                    <li className="px-5 py-2 md:text-lg font-inter text-lg font-medium text=[#364670]">Ничего не найдено</li>
+                                    <li className="px-5 py-2 md:text-lg font-inter text-lg font-medium text=[#364670]">Ничего
+                                        не найдено</li>
                                 )}
                             </ul>
                         </div>
